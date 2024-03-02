@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
-        "outDir": "build",
+        "outDir": "builded",
         "typeRoots": [
             "../node_modules/@types"
         ],

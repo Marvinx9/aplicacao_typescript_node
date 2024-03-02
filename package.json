@@ -4,7 +4,8 @@
   "description": "Aplicação typescript com node, postgres",
   "main": "server/server.ts",
   "scripts": {
-    "start": "./node-modules/.bin/ts-node ./server/server.ts",
+    "start": "NODE_ENV=development ./node-modules/.bin/ts-node ./server/server.ts",
+    "builded": "NODE_ENV=development node ./build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
