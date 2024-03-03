@@ -5,6 +5,7 @@ import { Application } from 'express';
 import morgan from 'morgan';
 import * as bodyParser from 'body-parser';
 import Routes from './routes/routes';
+import { errorHanddlerApi } from './errorHandlerApi';
 
 //criando classe api
 class Api { 
@@ -24,6 +25,8 @@ class Api {
         this.express.use(bodyParser.urlencoded( { extended:true } ));
         this.express.use(bodyParser.json());
         this.router(this.express); //'this.spress' é nosso objeto  representado por app na assinatura do método router logo abaixo
+        //colocar o errorHandler em comunicação com o noso servidor para ele interceptar eventuais problemas na requisição
+        this.router(this.express);
     }
 
     //metodo privado que recebe 'Aplication' e retorna uma instância de 'Routes' que depende de 'app'

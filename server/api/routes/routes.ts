@@ -1,4 +1,5 @@
 import { Application, Request, Response } from "express";
+import UserRoutes from '../../modules/User/routes';
 
 //criando classe com construtor que recebe uma instância do app express para podermos acessar o sistema de rotas
 // atravez do objeto app conseguimos acessar o modulo de rotas do express
@@ -10,10 +11,13 @@ class Routes {
     
     //função que também recebe a instância do app express e retorna void, ela apenas instancia as rotas no momento da aplicação
     //a função route vai receber o tipo de requisição que vai ser executada, pode ser um req ou res e vai retornar uma mensagem
-    // a rota padrão '/' vai retornar o 'Hello, word', a rota '/ola/:nome' vai retornar 'Hello + parâmetro nome do request
+    // a rota padrão '/all' vai retornar todos os usuários que estão disponíveis, a rota '/create' vai criar novos usuários
     getRoutes(app: Application): void {
-        app.route('/').get((req: Request, res:Response) => res.send('Hello, word!'));
-        app.route('/ola/:nome').get((req: Request, res: Response) => res.send(`Hello ${req.params.nome}`));
+        app.route('/api/users/all').get(this.router.index);
+        app.route('/api/users/create').post(this.router.create);
+        app.route('/api/users/:id').get(this.router.findOne);
+        app.route('/api/users/:id/update').put(this.router.update);
+        app.route('/api/users/:id/destroy').delete(this.router.destroy);
     }
 
 }

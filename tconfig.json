@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "esModuleInterop": true,
         "target": "es5",
         "module": "commonjs",
         "outDir": "builded",
@@ -17,6 +18,10 @@
     "exclude": [
         "node_modules"
     ],
+    "ts-node": {
+        "esm": true
+    },
     "compileOnSave": true,
-    "buildOnSave": true
+    "buildOnSave": true,
+    "esModuleInterop": true
 }
