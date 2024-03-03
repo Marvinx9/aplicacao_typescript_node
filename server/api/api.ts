@@ -1,8 +1,8 @@
 // metodo para iniciar sempre que for dado o start na aplicação
 //importando as libs nescessárias para o método funcionar
-import * as express from 'express';
+import express from 'express';
 import { Application } from 'express';
-import * as morgan from 'morgan';
+import morgan from 'morgan';
 import * as bodyParser from 'body-parser';
 import Routes from './routes/routes';
 
