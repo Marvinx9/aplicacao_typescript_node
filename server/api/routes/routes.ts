@@ -5,7 +5,10 @@ import UserRoutes from '../../modules/User/routes';
 // atravez do objeto app conseguimos acessar o modulo de rotas do express
 class Routes {
 
+    private router: UserRoutes;
+
     constructor(app: Application) {
+        this.router = new UserRoutes();
         this.getRoutes(app)   //toda vez que a classe Routes for instanciada a função getRoutes vai ser invocada
     }
     
