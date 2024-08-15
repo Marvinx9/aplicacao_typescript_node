@@ -3,9 +3,9 @@
         "esModuleInterop": true,
         "target": "es5",
         "module": "commonjs",
-        "outDir": "builded",
+        "outDir": "dist",
         "typeRoots": [
-            "../node_modules/@types"
+            "./node_modules/@types"
         ],
         "types": [
             "node"

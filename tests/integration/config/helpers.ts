@@ -1,10 +1,6 @@
-//definindo as configurações do nosso teste
-
-import * as mocha from 'mocha';
 import * as Chai from 'chai';
 import * as td from 'testdouble';
-const supertes = require('supertest');
-import App from '../../../server/api/api';  // importando a nossa aplicação
+import App from '../../../server/api/api'; // importando a nossa aplicação
 import supertest from 'supertest';
 
 //criando algumas constantes
@@ -15,11 +11,4 @@ const testDouble = td;
 
 //exportando as constantes
 
-export { app, expect, request, testDouble};
-
-
-
-
-
-
-
+export { app, expect, request, testDouble };

@@ -1,29 +1,18 @@
-//criando a classe com as funções utilizadas no routes da pasta routes
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Request, Response } from 'express';
 
 class UserRoutes {
-    constructor(){}
+  constructor() {}
 
-    index(req: Request, res: Response) {
+  index(req: Request, res: Response) {}
 
-    }
+  create(req: Request, res: Response) {}
 
-    create(req: Request, res: Response) {
+  findOne(req: Request, res: Response) {}
 
-    }
+  update(req: Request, res: Response) {}
 
-    findOne(req: Request, res: Response) {
-
-    }
-
-    update(req: Request, res: Response) {
-
-    }
-
-    destroy(req: Request, res: Response) {
-
-    }
+  destroy(req: Request, res: Response) {}
 }
 
 export default UserRoutes;
