@@ -1,5 +1,3 @@
-// módulo que vai exportar um objeto no json com as informações pertinentes ao nosso projeto
-
 module.exports = {
   env: 'development',
   db: 'ts-api',

@@ -1,14 +1,11 @@
 import * as Chai from 'chai';
 import * as td from 'testdouble';
-import App from '../../../server/api/api'; // importando a nossa aplicação
+import App from '../../../server/api/api';
 import supertest from 'supertest';
 
-//criando algumas constantes
 const app = App;
 const request = supertest;
 const expect = Chai.expect;
 const testDouble = td;
-
-//exportando as constantes
 
 export { app, expect, request, testDouble };
